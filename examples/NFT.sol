@@ -30,7 +30,7 @@ contract SimpleNFT is ERC721URIStorage, Ownable {
         _setTokenURI(tokenCounter, tokenURI);
 
 				// every time you mint, increment the amount of tokens you've created by 1.
-        tokenCounter = tokenCounter + 1;
+        ++ tokenCounter;
 				// we return the current token count, which is being used as the ID of the NFT.
         return tokenCounter;
     }
